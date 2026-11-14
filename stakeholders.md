@@ -4,7 +4,7 @@
 **Grupo:** Samuel Freitas e João Oliveira · **Turma:** A
 **Entrega:** E1 — Visão e plano · 13 de novembro de 2026
 
-> Os stakeholders são fictícios, mas plausíveis para o domínio escolhido. Nenhum corresponde a uma pessoa real e nenhum nome real é usado.
+> Os stakeholders são fictícios, nenhum corresponde a uma pessoa real e nenhum nome real é usado.
 
 ---
 
@@ -14,9 +14,9 @@ Critério de identificação: **quem usa, paga, gere, mantém ou é afetado pelo
 
 | ID | Stakeholder | Categoria | Porque é stakeholder |
 |---|---|---|---|
-| **STK-01** | Requisitante (aluno ou docente) | Utilizador final | **Usa** o sistema para pedir, levantar e devolver equipamento. É sobre ele que recai a penalização. |
-| **STK-02** | Técnico de balcão | Utilizador final | **Usa** o sistema em todos os atendimentos: aprova, entrega e recebe equipamento. Conhece as tarefas reais. |
-| **STK-03** | Gestor do parque de equipamentos | Cliente | **Gere** o catálogo e responde pelo estado do parque. Define os objetivos operacionais do sistema. |
+| **STK-01** | Requisitante (aluno ou docente) | Utilizador final | **Usa** o sistema para pedir, levantar e devolver equipamento. |
+| **STK-02** | Técnico de balcão | Utilizador final | **Usa** o sistema para aprovar, entregar e receber equipamentos. |
+| **STK-03** | Gestor do parque de equipamentos | Cliente | **Gere** o catálogo e responde pelo estado do parque. |
 | **STK-04** | Direção dos serviços | Cliente / patrocinador | **Paga** o sistema e define a política de empréstimo e de penalização. |
 | **STK-05** | Assistência técnica contratada | Responsável de manutenção | **Mantém** o equipamento físico. É afetada pela forma como o sistema sinaliza avarias e retira equipamento de circulação. |
 | **STK-06** | Conselho pedagógico | Stakeholder externo | **É afetado**: aprova o regulamento de empréstimo e é a instância a que um requisitante recorre se contestar uma penalização. |
@@ -36,7 +36,8 @@ Critério de identificação: **quem usa, paga, gere, mantém ou é afetado pelo
 | STK-06 | Conselho pedagógico | Interno | Alta | Indireto | Legal |
 | STK-07 | Equipa de desenvolvimento | Externo | Média | Direto | Técnica |
 
-**Posição** é lida face à organização onde o sistema é implantado: internos os serviços e quem a eles pertence, externos a assistência contratada e a equipa de projeto. **Interesse direto** significa impacto operacional — o stakeholder sente o sistema no seu trabalho diário; **indireto** significa impacto estratégico ou normativo.
+- **Posição** é lida face à organização onde o sistema é implantado: internos os serviços e quem a eles pertence, externos a assistência contratada e a equipa de projeto.
+- **Interesse** direto significa impacto operacional enquanto que o indireto significa impacto estratégico ou normativo.
 
 ---
 
@@ -47,20 +48,16 @@ Critério de identificação: **quem usa, paga, gere, mantém ou é afetado pelo
 | **Poder alto** | **Manter satisfeito**<br>STK-04 Direção dos serviços<br>STK-06 Conselho pedagógico | **Gerir de perto e envolver**<br>STK-03 Gestor do parque |
 | **Poder baixo** | **Monitorizar**<br>STK-05 Assistência técnica contratada | **Manter informado**<br>STK-01 Requisitante<br>STK-02 Técnico de balcão<br>STK-07 Equipa de desenvolvimento |
 
-A matriz tem dois níveis por eixo, enquanto a classificação da secção 2 tem três de influência. O critério usado é explícito: **influência média é colocada no lado do poder baixo**, porque nem STK-02 nem STK-07 podem travar o sistema ou alterar a política de empréstimo — influenciam o *como*, não o *se*. No eixo do interesse, direto corresponde a interesse alto e indireto a interesse baixo.
-
 Leitura da matriz:
 
-- **STK-03** é o único no quadrante de envolvimento próximo: é quem tem poder de decisão sobre o parque e, ao mesmo tempo, sofre diariamente as consequências do sistema. É o interlocutor permanente do projeto.
-- **STK-04 e STK-06** têm poder para travar o sistema, mas não o usam no dia a dia. Consultam-se nas decisões que tocam a política de penalização; não se envolvem no detalhe funcional.
-- **STK-02** é o caso que exige mais cuidado: tem interesse altíssimo e pouco poder formal. Se o sistema o atrapalhar, contorna-o — e é a via mais provável de falha do sistema, mesmo que tudo o resto esteja correto.
+- **STK-03** é quem tem poder de decisão sobre o parque e, ao mesmo tempo, sofre diariamente as consequências do sistema.
+- **STK-04 e STK-06** têm poder para travar o sistema, mas não o usam no dia a dia.
+- **STK-02** tem interesse altíssimo e pouco poder formal. Se o sistema o atrapalhar contorna-o, assim como é a via mais provável de falha do sistema, mesmo que tudo o resto esteja correto.
 - **STK-05** acompanha-se com esforço mínimo, com atenção a mudanças no modo como as avarias são sinalizadas.
 
 ---
 
 ## 4. Necessidades e objetivos
-
-Para cada stakeholder distinguem-se as necessidades **explícitas**, que declara, das **implícitas**, que não diz mas espera.
 
 ### STK-01 · Requisitante
 
@@ -71,13 +68,13 @@ Para cada stakeholder distinguem-se as necessidades **explícitas**, que declara
 ### STK-02 · Técnico de balcão
 
 - *Explícitas:* registar levantamentos e devoluções em poucos passos; ver o estado do equipamento no momento do atendimento; retirar de circulação equipamento avariado sem esperar por autorização.
-- *Implícita:* não ser obrigado a decidir sozinho os casos duvidosos — atraso limítrofe, kit incompleto, equipamento devolvido com dano.
+- *Implícita:* não ser obrigado a decidir sozinho os casos duvidosos como atraso limítrofe, kit incompleto, equipamento devolvido com dano.
 - *Restrição que impõe:* o registo tem de ser mais rápido do que o papel, ou é abandonado.
 
 ### STK-03 · Gestor do parque de equipamentos
 
 - *Explícitas:* ter o estado real e único de cada equipamento a qualquer momento; obter a lista de requisições em atraso sem a construir à mão; consultar o histórico de uso de um equipamento.
-- *Implícita:* que o sistema nunca perca o registo de uma devolução. Ninguém o pede, mas é esperado por todos.
+- *Implícita:* que o sistema nunca perca o registo de uma devolução.
 - *Restrição que impõe:* nenhum equipamento em manutenção pode voltar a ser emprestado.
 
 ### STK-04 · Direção dos serviços
@@ -110,13 +107,13 @@ Para cada stakeholder distinguem-se as necessidades **explícitas**, que declara
 
 **STK-02 (Técnico de balcão) × STK-03 (Gestor do parque de equipamentos)**
 
-O técnico de balcão quer poder aceitar uma devolução em atraso **sem aplicar penalização**, quando o requisitante apresenta uma justificação que lhe parece razoável — é ele que está à frente da pessoa, e é a sua relação com os utilizadores que fica em causa. O gestor do parque quer a regra aplicada **sem exceções**, porque é a uniformidade que dá à penalização efeito dissuasor e é ela que lhe permite justificar as decisões perante a direção e perante o conselho pedagógico.
+O técnico de balcão quer poder aceitar uma devolução em atraso **sem aplicar penalização**, quando o requisitante apresenta uma justificação que lhe parece razoável. O gestor do parque quer a regra aplicada **sem exceções**, porque é a uniformidade que dá à penalização efeito dissuasor e é ela que lhe permite justificar as decisões perante a direção e perante o conselho pedagógico.
 
 Os dois objetivos são incompatíveis: ou existe discricionariedade no atendimento, ou não existe.
 
-**Mediação proposta pela equipa de desenvolvimento.** A penalização é aplicada automaticamente pelo sistema, sem exceção no momento do atendimento — o que satisfaz STK-03, STK-04 e STK-06. Em compensação, o sistema regista a devolução com um campo de observação livre preenchido pelo técnico, e a penalização é **anulável a posteriori** por STK-03, com registo de quem a anulou e porquê. O técnico deixa de ter de decidir sozinho, mas a sua observação não se perde.
+**Mediação proposta pela equipa de desenvolvimento.** A penalização é aplicada automaticamente pelo sistema, sem exceção no momento do atendimento, o que satisfaz STK-03, STK-04 e STK-06. Em compensação, o sistema regista a devolução com um campo de observação livre preenchido pelo técnico, e a penalização é **anulável a posteriori** por STK-03, com registo de quem a anulou e porquê. O técnico deixa de ter de decidir sozinho, mas a sua observação não se perde.
 
-Esta decisão tem consequência direta no âmbito: a anulação de penalização é uma funcionalidade nova, que entra no backlog com prioridade baixa e **não** está entre os primeiros casos de uso a implementar. Enquanto não existir, a penalização é irreversível dentro do sistema — limitação assumida e registada.
+Esta decisão tem consequência direta no âmbito: a anulação de penalização é uma funcionalidade nova, que entra no backlog com prioridade baixa e **não** está entre os primeiros casos de uso a implementar. Enquanto não existir, a penalização é irreversível dentro do sistema.
 
 O conflito está inscrito no registo de riscos como **R7**, do tipo *Conflito de stakeholders*.
 
@@ -138,6 +135,4 @@ O conflito está inscrito no registo de riscos como **R7**, do tipo *Conflito de
 
 ## 7. Manutenção deste registo
 
-Este documento é um registo vivo. É revisto no início de cada entrega seguinte e sempre que o âmbito mudar, em particular quando chegar a alteração de requisitos de janeiro — momento em que a matriz poder–interesse indica quem tem de ser consultado antes de a mudança ser implementada.
-
-Nenhum stakeholder tem um único ponto de contacto atribuído: a lista identifica papéis, não pessoas, para que a saída de um interlocutor não bloqueie o projeto.
+Este documento é revisto no início de cada entrega seguinte e sempre que o âmbito mudar, em particular quando chegar a alteração de requisitos de janeiro.

@@ -1,20 +1,24 @@
 # GearHub — Sistema de Gestão de Empréstimo de Equipamentos
 
-Repositório do projeto de Engenharia de Software dedicado ao desenvolvimento de um sistema para controlo de catálogo, requisições, levantamentos, devoluções, atrasos e penalizações de equipamentos e kits.
+Projeto de Engenharia de Software: sistema de gestão de catálogo, requisições, levantamentos, devoluções, atrasos e penalizações de equipamentos e kits.
 
 **Grupo:** Samuel Freitas e João Oliveira  
 **Turma:** A  
+**Entrega:** E1 — Visão e plano · 13 de novembro de 2026  
 
 ---
 
 ## Ferramentas de Apoio ao Desenvolvimento (IA)
 
-Em conformidade com o plano de gestão de riscos (`riscos.md`, risco **R8**), ficam definidas as ferramentas de IA autorizadas para apoio à especificação, geração de código e tradução de casos de teste:
+Ferramentas de IA autorizadas (`riscos.md`, **R8**):
 
-* **Ferramenta Principal:** GitHub Copilot / Claude (para geração assistida e revisão estruturada)
-* **Ferramenta de Contingência:** ChatGPT / Gemini (alternativa imediata em caso de indisponibilidade ou limite de utilização da ferramenta principal)
+* **Principal:** GitHub Copilot / Claude
+* **Contingência:** ChatGPT / Gemini
 
-> **Nota de governação:** Nenhum código, requisito ou caso de teste gerado por IA é integrado sem revisão humana, validação face às exclusões de âmbito (`visao.md`) e execução dos testes desenhados previamente pelo grupo.
+> **Nota de governação:** nada gerado por IA é integrado sem:
+> - revisão humana;
+> - validação face às exclusões de âmbito (`visao.md`);
+> - execução dos testes desenhados previamente pelo grupo.
 
 ---
 
