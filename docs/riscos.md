@@ -2,7 +2,7 @@
 
 **Domínio:** Empréstimo de equipamentos
 **Grupo:** Samuel Freitas e João Oliveira · **Turma:** A
-**Entrega:** E1 — Visão e plano · 13 de novembro de 2026
+**Entrega:** E1 — Visão e plano · 22 de novembro de 2026
 
 Um risco é um acontecimento incerto que, se ocorrer, tem efeito negativo no projeto ou no produto.
 
@@ -58,7 +58,7 @@ Um prompt que descreve o caminho normal deixa a IA preencher o resto por omissã
 
 ### R2 · Requisitos ambíguos ou fora do âmbito propostos pela IA
 
-Nenhum texto de requisito produzido por uma ferramenta é aceite como está. Cada proposta é confrontada com duas perguntas: é verificável por um teste? está dentro da lista de exclusões da visão?. A secção 3 de `visao.md` é o critério de corte do âmbito e é consultada explicitamente em cada decisão.
+Nenhum texto de requisito produzido por uma ferramenta é aceite como está. Cada proposta é confrontada com duas perguntas: é verificável por um teste? está dentro da lista de exclusões da visão? A secção 3 de `visao.md` é o critério de corte do âmbito e é consultada explicitamente em cada decisão.
 
 ### R3 · Testes que confirmam o defeito
 
@@ -66,7 +66,7 @@ Os casos de teste são derivados dos requisitos por partições de equivalência
 
 ### R5 · Parâmetros da regra por decidir
 
-Os parâmetros são fixados junto do cliente antes de haver código que os possa assumir por omissão. A lista fechada está na secção 4 e nenhum item dela fica em aberto à entrada da construção. Cada parâmetro, ao ser decidido, gera imediatamente três casos de testem, véspera do limite, no limite, dia seguinte ao limite.
+Os parâmetros são fixados junto do cliente antes de haver código que os possa assumir por omissão. A lista fechada está na secção 4 e nenhum item dela fica em aberto à entrada da construção. Cada parâmetro, ao ser decidido, gera imediatamente três casos de teste: véspera do limite, no limite, dia seguinte ao limite.
 
 ### R6 · Revisão tardia da máquina de estados
 
@@ -76,7 +76,7 @@ Estados e transições são decididos no documento de requisitos e desenhados an
 
 ## 4. Parâmetros a fixar (mitigação de R5)
 
-Estes seis valores não estão decididos neste documento de visão, pois dependem da definição operacional a ser indicada pelo cliente (Gestor do parque de equipamentos / Direção dos serviços) na fase de levantamento e especificação de requisitos. Enquanto estiverem abertos constituem risco registado, pelo que nenhum chega à fase de construção sem estar formalmente fixado.
+Estes seis valores não estão decididos neste documento, pois dependem da definição operacional a ser indicada pelo cliente (Gestor do parque de equipamentos / Direção dos serviços) na fase de levantamento e especificação de requisitos. Enquanto estiverem abertos constituem risco registado, pelo que nenhum chega à fase de construção sem estar formalmente fixado.
 
 | Parâmetro | O que falta decidir com o cliente |
 |---|---|

@@ -2,7 +2,7 @@
 
 **Domínio:** Empréstimo de equipamentos
 **Grupo:** Samuel Freitas e João Oliveira · **Turma:** A
-**Entrega:** E1 — Visão e plano · 13 de novembro de 2026
+**Entrega:** E1 — Visão e plano · 22 de novembro de 2026
 
 > Os stakeholders são fictícios, nenhum corresponde a uma pessoa real e nenhum nome real é usado.
 
@@ -47,6 +47,8 @@ Critério de identificação: **quem usa, paga, gere, mantém ou é afetado pelo
 |---|---|---|
 | **Poder alto** | **Manter satisfeito**<br>STK-04 Direção dos serviços<br>STK-06 Conselho pedagógico | **Gerir de perto e envolver**<br>STK-03 Gestor do parque |
 | **Poder baixo** | **Monitorizar**<br>STK-05 Assistência técnica contratada | **Manter informado**<br>STK-01 Requisitante<br>STK-02 Técnico de balcão<br>STK-07 Equipa de desenvolvimento |
+
+A matriz tem dois níveis por eixo e a classificação da secção 2 tem três de influência. **Influência média fica do lado do poder baixo**, porque nem o técnico de balcão nem a equipa de desenvolvimento podem travar o sistema ou alterar a política de penalização: influenciam o *como*, não o *se*.
 
 Leitura da matriz:
 

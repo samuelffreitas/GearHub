@@ -4,7 +4,7 @@ Projeto de Engenharia de Software: sistema de gestão de catálogo, requisiçõe
 
 **Grupo:** Samuel Freitas e João Oliveira  
 **Turma:** A  
-**Entrega:** E1 — Visão e plano · 13 de novembro de 2026  
+**Entrega:** E1 — Visão e plano · 22 de novembro de 2026  
 
 ---
 
@@ -24,8 +24,9 @@ Ferramentas de IA autorizadas (`riscos.md`, **R8**):
 
 ## Estrutura da Documentação (Entrega E1 — Visão e Plano)
 
-* [`visao.md`](visao.md) — Problema, utilizadores, fronteiras e exclusões de âmbito
-* [`stakeholders.md`](stakeholders.md) — Identificação, matriz poder–interesse, conflitos e comunicação
-* [`riscos.md`](riscos.md) — Matriz de riscos, planos de mitigação e parâmetros pendentes
-* [`processo.md`](processo.md) — Justificação do modelo iterativo e incremental e regras de execução
-* [`backlog.md`](backlog.md) — Product backlog inicial priorizado e linha de corte
+* [`docs/visao.md`](docs/visao.md) — Problema, utilizadores, fronteiras e exclusões de âmbito
+* [`docs/stakeholders.md`](docs/stakeholders.md) — Identificação, matriz poder–interesse, conflitos e comunicação
+* [`docs/riscos.md`](docs/riscos.md) — Matriz de riscos, planos de mitigação e parâmetros pendentes
+* [`docs/processo.md`](docs/processo.md) — Justificação do modelo iterativo e incremental e regras de execução
+* [`docs/backlog.md`](docs/backlog.md) — Product Goal, backlog priorizado em MoSCoW, critérios de aceitação e linha de corte
+* [`docs/dod.md`](docs/dod.md) — Definition of Done do grupo

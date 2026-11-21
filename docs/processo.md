@@ -2,7 +2,7 @@
 
 **Domínio:** Empréstimo de equipamentos
 **Grupo:** Samuel Freitas e João Oliveira · **Turma:** A
-**Entrega:** E1 — Visão e plano · 13 de novembro de 2026
+**Entrega:** E1 — Visão e plano · 22 de novembro de 2026
 
 ---
 
@@ -92,6 +92,10 @@ O número de iterações é por isso **reduzido a duas**, com a fronteira entre 
 | **Evolutivo exploratório** | Parte de uma especificação inicial resumida e evolui acrescentando o que o cliente propõe. Aqui a especificação tem de estar detalhada antes da construção, porque é ela o contexto que a ferramenta de IA recebe. O processo é também pouco visível e difícil de medir, incompatível com a rastreabilidade exigida. |
 | **Prototipagem** | Serve para compreender requisitos mal compreendidos, começando pelo que não se sabe. Neste domínio o que o sistema faz está definido desde o início, e a dificuldade está em garantir que os estados, os atrasos e as penalizações estão corretos. O problema é de verificação, não de descoberta. |
 | **RAD** | Dá prioridade à rapidez de entrega e exige utilizadores disponíveis e comprometidos, workshops e equipa experiente, condições que não existem. A pressa prejudica ainda a qualidade da documentação, que é aqui o produto avaliado. |
+
+### 3.4 O que se retém dos métodos ágeis
+
+O vocabulário do Scrum já está imposto pelo enunciado: a construção faz-se em dois sprints e o backlog é entregável do E1. Os **eventos** do Scrum, porém, não se transpõem — não há Daily Scrum num grupo de dois sem trabalho diário em comum, nem Sprint Review sem cliente para inspecionar o incremento, que é o mesmo obstáculo do fator 2.3. Retêm-se os três artefactos, que sobrevivem sem os eventos: o Product Backlog priorizado e o Product Goal, em [`backlog.md`](backlog.md), e a Definition of Done, em [`dod.md`](dod.md). Do XP retêm-se duas práticas técnicas, por responderem ao risco dominante deste projeto: os testes escritos antes do código, que é a resposta já registada ao risco R3, e o par humano–IA, em que a ferramenta escreve e um elemento do grupo revê e decide, que é a resposta a R1 e R4.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Domínio:** Empréstimo de equipamentos
 **Grupo:** Samuel Freitas e João Oliveira · **Turma:** A
-**Entrega:** E1 — Visão e plano · 13 de novembro de 2026
+**Entrega:** E1 — Visão e plano · 22 de novembro de 2026
 
 > Nota de contexto: Os dados de utilizadores, equipamentos e requisições usados em exemplos, testes e demonstrações são inteiramente fictícios.
 
@@ -41,7 +41,7 @@ Sem regra escrita e sem registo do que aconteceu, a consequência de um atraso d
 
 ## 3. O que fica fora do âmbito
 
-Ficam **explicitamente** fora do âmbito qualquer proposta que venha de um elemento do grupo ou de uma ferramenta de IA por referência a esta secção:
+Os temas seguintes ficam **explicitamente** fora do âmbito. Qualquer proposta nestes termos é rejeitada por referência a esta secção, venha de um elemento do grupo ou de uma ferramenta de IA:
 
 | Fora do âmbito | Fronteira exata |
 |---|---|
@@ -49,7 +49,7 @@ Ficam **explicitamente** fora do âmbito qualquer proposta que venha de um eleme
 | **Gestão de compras e inventário patrimonial** | O catálogo de equipamentos é dado. O sistema não trata aquisições, abates, amortizações nem contabilidade. |
 | **Integração com sistemas externos** | Sem autenticação institucional, sem calendário académico, sem envio de email ou SMS. As notificações de aproximação do prazo ficam fora desta iteração. |
 | **Manutenção como processo** | Um equipamento pode ser marcado como "em manutenção", mas o sistema não gere ordens de reparação, prazos de assistência, custos nem fornecedores. |
-| **Reserva por calendário** | A requisição é para levantamento imediato ou para uma data única. 
+| **Reserva por calendário** | A requisição é para levantamento imediato ou para uma data única. Não há agenda nem gestão de conflitos de horário. |
 | **Devolução parcial de kits** | Um kit é tratado como unidade indivisível. Devolve-se inteiro ou fica por devolver. |
 | **Aplicação móvel, leitura de códigos de barras e interface elaborada** | A qualidade visual não é objeto de avaliação. A interface é a mínima necessária para executar os casos de uso. |
 | **Dados pessoais reais** | Nenhum nome, email ou número de aluno real entra no sistema nem nos prompts dados às ferramentas de IA. |
@@ -63,4 +63,5 @@ Ficam **explicitamente** fora do âmbito qualquer proposta que venha de um eleme
 | [`stakeholders.md`](stakeholders.md) | Identificação, classificação, matriz poder–interesse e comunicação |
 | [`riscos.md`](riscos.md) | Registo de riscos com probabilidade, impacto, nível e resposta |
 | [`processo.md`](processo.md) | Modelo de processo escolhido e alternativas consideradas |
-| [`backlog.md`](backlog.md) | Product backlog inicial com histórias priorizadas |
+| [`backlog.md`](backlog.md) | Product Goal, backlog priorizado em MoSCoW e critérios de aceitação |
+| [`dod.md`](dod.md) | Definition of Done aplicada a todas as histórias |
