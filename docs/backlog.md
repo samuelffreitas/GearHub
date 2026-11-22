@@ -24,6 +24,27 @@ Cada história tem um estado de entrada e um estado de saída do equipamento dec
 
 **MoSCoW:** Must (tem de ter) · Should (devia ter) · Could (podia ter) · Won't (não desta vez).
 **Tamanho:** P, M ou G, por comparação entre histórias.
+**Crit.:** número de critérios de aceitação escritos neste documento (secção 4). O símbolo — indica que os critérios são produzidos no E2.
+
+### 2.1 Estados do equipamento e transições
+
+Os estados e as transições abaixo resultam apenas das histórias deste backlog. Toda a transição que não está na lista das permitidas é **proibida**, e cada transição proibida dá origem a um teste negativo (risco R1).
+
+**Estados:** Disponível · Pedido pendente · Reservado · Em empréstimo · Em atraso · Em manutenção.
+
+| Transição permitida | História |
+|---|---|
+| Disponível → Pedido pendente | HU-02 |
+| Pedido pendente → Reservado | HU-03 (aprovação) |
+| Pedido pendente → Disponível | HU-03 (recusa) |
+| Reservado → Em empréstimo | HU-04 |
+| Em empréstimo → Em atraso | HU-06 |
+| Em empréstimo → Disponível | HU-05 |
+| Em atraso → Disponível | HU-05 |
+| Disponível → Em manutenção | HU-09 |
+| Em manutenção → Disponível | HU-09 |
+
+Exemplos de transições proibidas: Disponível → Em empréstimo (levantar sem requisição aprovada), devolver um equipamento que está Disponível (nunca foi levantado), Em manutenção → Pedido pendente, Em manutenção → Reservado, Em empréstimo → Pedido pendente, Reservado → Reservado.
 
 ---
 
@@ -48,8 +69,8 @@ Cada história tem um estado de entrada e um estado de saída do equipamento dec
 
 | ID | História | Prior. | Tam. | Crit. | Valor e impacto | Estado do equipamento |
 |---|---|---|---|---|---|---|
-| **HU-04** | Como técnico de balcão, quero registar o levantamento de um equipamento reservado, fixando o prazo de devolução. | **Must** | M | — | Segundo verbo do domínio. Cria o prazo, de que depende todo o tratamento de atrasos: sem ele, as histórias HU-06 a HU-08 não têm sobre o que operar. | Reservado → Em empréstimo |
-| **HU-05** | Como técnico de balcão, quero registar a devolução de um equipamento, para o devolver ao estado disponível. | **Must** | M | — | Terceiro verbo do domínio. Fecha o ciclo e é o momento em que o atraso é apurado. | Em empréstimo ou Em atraso → Disponível |
+| **HU-04** | Como técnico de balcão, quero registar o levantamento de um equipamento reservado, fixando o prazo de devolução, para dar início ao empréstimo. | **Must** | M | — | Segundo verbo do domínio. Cria o prazo, de que depende todo o tratamento de atrasos: sem ele, as histórias HU-06 a HU-08 não têm sobre o que operar. | Reservado → Em empréstimo |
+| **HU-05** | Como técnico de balcão, quero registar a devolução de um equipamento, para o devolver ao estado disponível. | **Must** | M | — | Terceiro verbo do domínio. Fecha o ciclo. Se o equipamento estava Em atraso (HU-06), é neste momento que fica fixado o número de dias de atraso de que a HU-07 precisa. | Em empréstimo ou Em atraso → Disponível |
 
 ### Área funcional: Atrasos e penalizações
 
@@ -58,32 +79,32 @@ Cada história tem um estado de entrada e um estado de saída do equipamento dec
 | **HU-06** | Como gestor do parque, quero que o sistema identifique as requisições cujo prazo de devolução já passou, para as ver como estando em atraso. | **Must** | M | — | Primeira das três dificuldades declaradas do domínio. Sem ela o sistema é apenas um registo de movimentos. | Em empréstimo → Em atraso |
 | **HU-07** | Como gestor do parque, quero que um atraso aplique automaticamente uma penalização ao requisitante, para que a consequência seja igual para todos. | **Must** | M | — | Segunda dificuldade declarada. É a história com a regra mais sensível a valores-limite e a que carrega maior risco de erro de geração. | — |
 | **HU-08** | Como requisitante, quero ser impedido de submeter nova requisição enquanto tiver penalização ativa, para que a penalização tenha efeito. | **Must** | P | — | Torna HU-07 verificável por comportamento observável. Sem ela, a penalização existe mas não faz nada. | Bloqueia a transição Disponível → Pedido pendente |
-| **HU-13** | Como gestor do parque, quero poder anular uma penalização, registando quem a anulou e porquê. | Won't | P | — | Resulta da mediação do conflito entre o técnico de balcão e o gestor do parque, registado como risco R7. O sistema é coerente sem ela: enquanto não existir, a penalização é irreversível. | — |
+| **HU-13** | Como gestor do parque, quero poder anular uma penalização, registando quem a anulou e porquê, para corrigir os casos em que a penalização não se justifica. | Won't | P | — | Resulta da mediação do conflito entre o técnico de balcão e o gestor do parque, registado como risco R7. O sistema é coerente sem ela: enquanto não existir, a penalização é irreversível. | — |
 
 ### Área funcional: Estado do equipamento
 
 | ID | História | Prior. | Tam. | Crit. | Valor e impacto | Estado do equipamento |
 |---|---|---|---|---|---|---|
-| **HU-09** | Como técnico de balcão, quero marcar um equipamento como em manutenção ou indisponível, para o retirar de circulação. | Should | P | — | Terceira dificuldade declarada do domínio. Fecha a máquina de estados do equipamento e cria as transições proibidas que dão origem aos testes negativos previstos para o risco R1. | Disponível → Em manutenção, e Em manutenção → Disponível |
+| **HU-09** | Como técnico de balcão, quero marcar um equipamento como em manutenção, para o retirar de circulação. | Should | P | — | Terceira dificuldade declarada do domínio. Fecha a máquina de estados do equipamento e cria as transições proibidas que dão origem aos testes negativos previstos para o risco R1. | Disponível → Em manutenção, e Em manutenção → Disponível |
 | **HU-11** | Como gestor do parque, quero consultar o histórico de requisições de um equipamento, para perceber o seu uso. | Could | P | — | Leitura sobre dados já existentes. Não participa no ciclo de empréstimo nem acrescenta transições. | — |
 
 ---
 
 ## 4. Critérios de aceitação
 
-Escritos para as três histórias de maior prioridade. Os restantes são produzidos no E2, com a numeração dos requisitos. Cada história inclui um cenário negativo, que dá origem aos testes negativos exigidos pelo risco R1.
+Escritos para as três histórias que abrem o ciclo de empréstimo (consulta, requisição e aprovação), por serem aquelas de que as restantes dependem. Os das restantes histórias são produzidos no E2, com a numeração dos requisitos. HU-06 a HU-08 dependem ainda dos parâmetros da regra de atraso e penalização, por fixar em [`riscos.md`](riscos.md) (secção 4, mitigação de R5): os seus critérios, incluindo os de valor-limite da HU-07, só são escritos depois disso. Os cenários com o estado Em manutenção são escritos com a HU-09, para que os critérios da HU-01 e da HU-02 não dependam de uma história Should. Cada história inclui um cenário negativo, que dá origem aos testes negativos exigidos pelo risco R1.
 
 ### HU-01 · Consultar equipamentos disponíveis
 
 - Dado um catálogo com equipamentos em vários estados, quando o requisitante consulta a lista de disponíveis, então vê apenas os equipamentos em estado **Disponível**.
-- Dado um equipamento em estado **Em manutenção**, quando o requisitante consulta a lista de disponíveis, então esse equipamento não aparece.
+- Dado um equipamento em estado **Em empréstimo**, quando o requisitante consulta a lista de disponíveis, então esse equipamento não aparece.
 - Dado um kit cujos componentes estão todos disponíveis, quando o requisitante consulta a lista, então o kit aparece como uma unidade indivisível, e não como componentes soltos.
 
 ### HU-02 · Submeter uma requisição
 
 - Dado um equipamento **Disponível** e um requisitante sem penalização ativa, quando submete uma requisição, então é criada com estado **Pedido pendente** e o equipamento deixa de aparecer como disponível para novos pedidos.
-- Dado um requisitante com penalização ativa, quando tenta submeter uma requisição, então o sistema recusa e indica a data em que a penalização termina.
-- Dado um equipamento em estado **Em manutenção**, quando o requisitante tenta requisitá-lo, então o sistema recusa, porque a transição Em manutenção → Pedido pendente não existe.
+- Dado um requisitante com penalização ativa, quando tenta submeter uma requisição, então o sistema recusa e indica a data em que a penalização termina. Este comportamento é da HU-08; aqui verifica-se apenas que a submissão o respeita.
+- Dado um equipamento em estado **Em empréstimo**, quando o requisitante tenta requisitá-lo, então o sistema recusa, porque a transição Em empréstimo → Pedido pendente não existe.
 
 ### HU-03 · Aprovar ou recusar uma requisição
 
@@ -112,7 +133,7 @@ Registadas para que não voltem a ser propostas, por um elemento do grupo ou por
 - **Must (HU-01 a HU-08)** — o núcleo que tem de funcionar de ponta a ponta. Cobrem os três verbos do domínio (requisição, levantamento e devolução) e as duas primeiras dificuldades declaradas, os atrasos e as penalizações.
 - **Should (HU-09)** — primeira candidata a entrar acima da linha, por ser a única das restantes que fecha a terceira dificuldade do domínio e acrescenta transições à entidade principal.
 - **Could (HU-10, HU-11, HU-12)** — leitura ou funcionalidade de conveniência. Entram apenas se o âmbito o permitir, e a sua ausência não impede o sistema de resolver o problema descrito na visão.
-- **Won't (HU-13)** — a anulação de penalização, adiada por decisão registada na secção 6 de [`stakeholders.md`](stakeholders.md).
+- **Won't (HU-13)** — a anulação de penalização, adiada por decisão registada na secção 5 de [`stakeholders.md`](stakeholders.md).
 
 Se o tempo faltar, corta-se pelos Could, nunca na verificação das histórias que ficam.
 

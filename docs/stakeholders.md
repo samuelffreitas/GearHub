@@ -48,7 +48,7 @@ Critério de identificação: **quem usa, paga, gere, mantém ou é afetado pelo
 | **Poder alto** | **Manter satisfeito**<br>STK-04 Direção dos serviços<br>STK-06 Conselho pedagógico | **Gerir de perto e envolver**<br>STK-03 Gestor do parque |
 | **Poder baixo** | **Monitorizar**<br>STK-05 Assistência técnica contratada | **Manter informado**<br>STK-01 Requisitante<br>STK-02 Técnico de balcão<br>STK-07 Equipa de desenvolvimento |
 
-A matriz tem dois níveis por eixo e a classificação da secção 2 tem três de influência. **Influência média fica do lado do poder baixo**, porque nem o técnico de balcão nem a equipa de desenvolvimento podem travar o sistema ou alterar a política de penalização: influenciam o *como*, não o *se*.
+A matriz tem dois níveis por eixo e a classificação da secção 2 tem três de influência. **Influência média fica do lado do poder baixo**, porque nem o técnico de balcão nem a equipa de desenvolvimento podem travar o sistema ou alterar a política de penalização: influenciam o *como*, não o *se*. A equipa de desenvolvimento decide como o sistema é construído, mas não a política de empréstimo, que é do cliente; é nesse sentido que tem poder baixo sobre o sistema em operação.
 
 Leitura da matriz:
 

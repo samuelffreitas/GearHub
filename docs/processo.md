@@ -68,13 +68,13 @@ O número de iterações é por isso **reduzido a duas**, com a fronteira entre 
 
 ## 3. Alternativas consideradas
 
-### 3.1 Cascata, e cascata revisto
+### 3.1 Cascata, e cascata revista
 
 **Porque foi considerada.** A cascata é adequada quando os requisitos são bem compreendidos e as alterações são limitadas, e em contextos que exigem documentação formal e rastreabilidade. 
 
 **Porque foi rejeitada.** Pelo primeiro critério, que falha por completo. A desvantagem principal da cascata é a dificuldade em acomodar alterações depois de o processo arrancar, e é pouco adequada quando os requisitos mudam com frequência.
 
-**E o cascata revisto?** A realimentação controlada resolveria em parte o problema das alterações, permitindo regressar a uma fase anterior. Mas mantém a estrutura sequencial: continua a haver uma única passagem pelas fases, sem versões parciais do sistema ao longo do caminho, sendo que o projeto exige duas fases de construção, cada uma a terminar com o sistema a funcionar.
+**E a cascata revista?** A realimentação controlada resolveria em parte o problema das alterações, permitindo regressar a uma fase anterior. Mas mantém a estrutura sequencial: continua a haver uma única passagem pelas fases, sem versões parciais do sistema ao longo do caminho, sendo que o projeto exige duas iterações de construção, cada uma a terminar com o sistema a funcionar.
 
 ### 3.2 Espiral
 

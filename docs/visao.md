@@ -33,7 +33,7 @@ Sem regra escrita e sem registo do que aconteceu, a consequência de um atraso d
 | Utilizador | O que faz no sistema |
 |---|---|
 | **Requisitante** (aluno ou docente) | Consulta o que está disponível, submete uma requisição, levanta e devolve o equipamento, consulta as suas requisições e o seu estado de penalização. |
-| **Técnico de balcão** | Aprova ou recusa requisições, confirma o levantamento fixando o prazo de devolução, regista a devolução e marca equipamento como em manutenção ou indisponível. |
+| **Técnico de balcão** | Aprova ou recusa requisições, confirma o levantamento fixando o prazo de devolução, regista a devolução e marca equipamento como em manutenção. |
 | **Gestor do parque de equipamentos** | Mantém o catálogo de equipamentos e kits, consulta o histórico de cada equipamento e a lista de requisições em atraso. |
 
 
